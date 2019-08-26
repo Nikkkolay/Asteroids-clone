@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AsteroidsCore</name>
+    </assembly>
+    <members>
+        <member name="T:AsteroidsCore.GameObject">
+            <summary>
+            Базовый класс для объектов игры Asteroids.
+            </summary>
+        </member>
+        <member name="P:AsteroidsCore.GameObject.CenterX">
+            <value>Центр объекта по оси Х.</value>  
+        </member>
+        <member name="P:AsteroidsCore.GameObject.CenterY">
+            <value>Центр объекта по оси Y.</value>  
+        </member>
+        <member name="P:AsteroidsCore.GameObject.SpeedX">
+            <value>Растояние, преодолеваемое за единицу времени, объекта по оси Х.</value>  
+        </member>
+        <member name="P:AsteroidsCore.GameObject.SpeedY">
+            <value>Растояние, преодолеваемое за единицу времени, объекта по оси Y.</value> 
+        </member>
+        <member name="P:AsteroidsCore.GameObject.MaxSpeed">
+            <value>Максимальное растояние, которое объект может преодолеть за единицу времени.</value> 
+        </member>
+        <member name="M:AsteroidsCore.GameObject.#ctor">
+            <summary>Пустой конструктор.</summary>
+        </member>
+        <member name="M:AsteroidsCore.GameObject.#ctor(System.Int32,System.Int32,System.Single,System.Single,System.Single)">
+            <param name="centerX">Центр объекта по оси Х.</param>
+            <param name="centerY">Центр объекта по оси Y.</param>
+            <param name="speedX">Растояние, преодолеваемое за единицу времени, объекта по оси Х.</param>
+            <param name="speedY">Растояние, преодолеваемое за единицу времени, объекта по оси Y.</param>
+            <param name="maxSpeed">Максимальное растояние, которое объект может преодолеть за единицу времени.</param>
+        </member>
+        <member name="M:AsteroidsCore.GameObject.Drow(System.Object[])">
+            <summary>
+            Метод отрисовывающий объект.
+            </summary>
+            <param name="list">Набор параметров необходимых для отрисовки</param>
+        </member>
+        <member name="M:AsteroidsCore.GameObject.IsInside(System.Int32,System.Int32)">
+            <summary>
+            Метод проверяющий находится ли переданная точка (х, у) внутри объекта.
+            Используется для проверки на попадание в объект.
+            </summary>
+            <param name="x">Координата точки по оси Х</param>
+            <param name="y">Координата точки по оси Y</param>
+            <returns>Возвращает true, если точка внутри объекта, иначе возвращает false</returns>
+        </member>
+        <member name="T:AsteroidsCore.Spaceship">
+            <summary>
+            Базовый класс космического корабля без отрисовки и проверки на попадание
+            </summary>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.Angle">
+            <value>Угол в радианах, на который повернут корабль.</value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.ImpulseAngle">
+            <value>Угол в радианах, на который был повернут корабль
+            последний раз с включенным двигателем.
+            </value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.Acceleration">
+            <value>Скорость, куторую набирает корабль за единицу времени при работающем двигателе.</value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.Deceleration">
+            <value>Скорость, куторую теряет корабль за единицу времени при выключенном двигателе.</value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.SpeedRotate">
+            <value>Угол в радианах на который может повернуть корабль за единицу времени.</value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.NumLasers">
+            <value>Текущее количество лазерных зарядов.</value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.NumMaxLasers">
+            <value>Максимальное количество лазерных зарядов.</value>
+        </member>
+        <member name="P:AsteroidsCore.Spaceship.TimeRecoveryLasers">
+            <value>Количество кадров, за которе востанавливается один лазерный заряд.</value>
+        </member>
+        <member name="M:AsteroidsCore.Spaceship.#ctor">
+            <summary>Пустой конструктор.</summary>
+        </member>
+        <member name="M:AsteroidsCore.Spaceship.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Byte,System.Byte,System.Int16,System.Int32,System.Int32,System.Single,System.Single,System.Single)">
+            <param name="angle">Угол в радианах, на который повернут корабль.</param>
+            <param name="impulseAngle">Угол в радианах, на который был повернут корабль последний раз с включенным двигателем.</param>
+            <param name="acceleration">Скорость, куторую набирает корабль за единицу времени при работающем двигателе.</param>
+            <param name="deceleration">Скорость, куторую теряет корабль за единицу времени при выключенном двигателе.</param>
+            <param name="speedRotate">Угол в радианах на который может повернуть корабль за единицу времени.</param>
+            <param name="numLasers">Текущее количество лазерных зарядов.</param>
+            <param name="numMaxLasers">Максимальное количество лазерных зарядов.</param>
+            <param name="timeRecoveryLasers">Количество единиц времени, за которе востанавливается один лазерный заряд.</param>
+            <param name="centerX">Центр объекта по оси Х.</param>
+            <param name="centerY">Центр объекта по оси Y.</param>
+            <param name="speedX">Растояние, преодолеваемое за единицу времени, объекта по оси Х.</param>
+            <param name="speedY">Растояние, преодолеваемое за единицу времени, объекта по оси Y.</param>
+            <param name="maxSpeed">Максимальное растояние, которое объект может преодолеть за единицу времени.</param>
+        </member>
+    </members>
+</doc>

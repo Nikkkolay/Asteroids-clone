@@ -1,0 +1,11 @@
+/.vs/*
+*.user
+
+AsteroidsCore/obj/
+/AsteroidsCore/bin/Release/*.pdb
+
+/AsteroidsClone/obj/
+AsteroidsClone/Content/obj/
+AsteroidsClone/bin/Windows/Content/
+/AsteroidsClone/bin/Windows/x86/Release/*.pdb
+/AsteroidsClone/bin/Windows/x86/Release/*.xml
